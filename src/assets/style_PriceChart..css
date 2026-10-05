@@ -1,0 +1,280 @@
+.chart-card {
+  margin-top: 25px;
+
+  padding: 25px;
+
+  background: #12151c;
+
+  border: 1px solid #252a34;
+
+  border-radius: 22px;
+}
+
+
+/* Header */
+
+.chart-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+.label {
+  color: #737c8d;
+
+  font-size: 10px;
+
+  letter-spacing: 1.8px;
+
+  font-weight: 700;
+}
+
+
+.chart-price {
+  margin-top: 8px;
+
+  font-size: 30px;
+
+  font-weight: 900;
+}
+
+
+.change {
+  margin-top: 7px;
+
+  color: #38d996;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+.change span {
+  margin-right: 4px;
+}
+
+
+.change small {
+  margin-left: 5px;
+
+  color: #687183;
+
+  font-size: 11px;
+
+  font-weight: 400;
+}
+
+
+/* Time Filter */
+
+.time-filter {
+  display: flex;
+
+  gap: 5px;
+
+  padding: 4px;
+
+  background: #191d25;
+
+  border: 1px solid #272c35;
+
+  border-radius: 10px;
+}
+
+
+.time-filter button {
+  min-width: 38px;
+
+  height: 31px;
+
+  border: 0;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #6e7788;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .2s;
+}
+
+
+.time-filter button:hover {
+  color: #ffffff;
+}
+
+
+.time-filter button.active {
+  background: #d9b85a;
+
+  color: #111111;
+}
+
+
+/* Chart */
+
+.chart-container {
+  display: flex;
+
+  height: 360px;
+
+  margin-top: 30px;
+}
+
+
+.y-axis {
+  width: 60px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  padding-bottom: 30px;
+
+  color: #596273;
+
+  font-size: 10px;
+
+  text-align: right;
+}
+
+
+.chart {
+  position: relative;
+
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.chart-svg {
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  width: 100%;
+
+  height: calc(100% - 30px);
+
+  overflow: visible;
+}
+
+
+/* Grid */
+
+.horizontal-line {
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  height: 1px;
+
+  border-top: 1px dashed #242933;
+
+  opacity: .8;
+}
+
+
+.line-1 {
+  top: 0;
+}
+
+
+.line-2 {
+  top: 20%;
+}
+
+
+.line-3 {
+  top: 40%;
+}
+
+
+.line-4 {
+  top: 60%;
+}
+
+
+.line-5 {
+  top: 80%;
+}
+
+
+/* X Axis */
+
+.x-axis {
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  height: 25px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  color: #596273;
+
+  font-size: 10px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+  .chart-card {
+    padding: 18px;
+  }
+
+
+  .chart-header {
+    flex-direction: column;
+  }
+
+
+  .time-filter {
+    width: 100%;
+  }
+
+
+  .time-filter button {
+    flex: 1;
+  }
+
+
+  .chart-container {
+    height: 300px;
+  }
+
+
+  .chart-price {
+    font-size: 25px;
+  }
+
+}

@@ -1,0 +1,491 @@
+.cards {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+/* =========================
+   CHART
+========================= */
+
+.chart {
+  margin-top: 25px;
+  padding: 25px;
+  background: #12151c;
+  border: 1px solid #252a34;
+  border-radius: 22px;
+}
+
+.chart-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.chart-head span {
+  color: #737c8d;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.chart-head h2 {
+  margin: 8px 0;
+  font-size: 29px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.chart-head b {
+  color: #38d996;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =========================
+   FILTER BUTTONS
+========================= */
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filters button {
+  height: 32px;
+  min-width: 38px;
+  padding: 0 10px;
+
+  background: #191d25;
+  border: 1px solid transparent;
+
+  color: #6e7788;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.filters button:hover {
+  color: #ffffff;
+  background: #222732;
+}
+
+.filters button:active {
+  transform: scale(0.95);
+}
+
+.filters button.active {
+  background: #d9b85a;
+  color: #111111;
+}
+
+/* =========================
+   GRAPH
+========================= */
+
+.graph {
+  position: relative;
+
+  height: 300px;
+
+  margin-top: 25px;
+  padding: 15px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 59px,
+      #20242c 60px
+    ),
+    #151921;
+}
+
+.graph::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 99px,
+      rgba(32, 36, 44, 0.5) 100px
+    );
+}
+
+.graph svg {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+}
+
+/* خطوط شبکه نمودار */
+
+.grid-line {
+  stroke: #252a34;
+  stroke-width: 1;
+  stroke-dasharray: 5 5;
+}
+
+/* خود خط چارت */
+
+.graph polyline {
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   CHART LOADING
+========================= */
+
+.chart-loading {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #697283;
+
+  font-size: 12px;
+}
+
+/* =========================
+   CHART INFO
+========================= */
+
+.chart-info {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 10px;
+
+  color: #697283;
+
+  font-size: 10px;
+}
+
+.chart-info span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* =========================
+   PRICE COLORS
+========================= */
+
+.positive {
+  color: #38d996 !important;
+}
+
+.negative {
+  color: #e05260 !important;
+}
+
+/* =========================
+   MARKET TABLE
+========================= */
+
+.table {
+  margin-top: 25px;
+  padding: 25px;
+
+  background: #12151c;
+
+  border: 1px solid #252a34;
+  border-radius: 22px;
+}
+
+/* =========================
+   TABLE HEADER
+========================= */
+
+.table-title {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.table-title span {
+  color: #d9b85a;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+.table-title h2 {
+  margin-top: 5px;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.table-title a {
+  color: #d9b85a;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  transition: color 0.2s ease;
+}
+
+.table-title a:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   TABLE ROW
+========================= */
+
+.row {
+  min-height: 65px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.5fr
+    1fr
+    1.5fr
+    1fr
+    1fr;
+
+  align-items: center;
+
+  border-top: 1px solid #222630;
+
+  font-size: 12px;
+
+  transition:
+    background 0.2s ease,
+    padding 0.2s ease;
+}
+
+.row:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.row strong {
+  color: #ffffff;
+
+  font-size: 13px;
+}
+
+.row span {
+  color: #70798a;
+}
+
+.row b {
+  color: #ffffff;
+
+  font-weight: 600;
+}
+
+.row i {
+  color: #38d996;
+
+  font-style: normal;
+
+  font-weight: 700;
+}
+
+/* =========================
+   MARKET TYPE
+========================= */
+
+.row span:last-child {
+  text-transform: uppercase;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+}
+
+/* =========================
+   TABLE SCROLL
+========================= */
+
+.table {
+  overflow: hidden;
+}
+
+/* =========================
+   LARGE SCREEN
+========================= */
+
+@media (max-width: 1200px) {
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .chart {
+    padding: 20px;
+  }
+
+  .table {
+    padding: 20px;
+  }
+
+  .chart-head {
+    flex-direction: column;
+  }
+
+  .filters {
+    width: 100%;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .chart {
+    padding: 18px;
+
+    border-radius: 18px;
+  }
+
+  .chart-head h2 {
+    font-size: 25px;
+  }
+
+  .filters {
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding-bottom: 3px;
+  }
+
+  .filters button {
+    flex-shrink: 0;
+  }
+
+  .graph {
+    height: 220px;
+
+    margin-top: 20px;
+
+    padding: 10px;
+  }
+
+  .chart-info {
+    font-size: 9px;
+  }
+
+  .table {
+    padding: 18px;
+
+    border-radius: 18px;
+  }
+
+  .table-title h2 {
+    font-size: 18px;
+  }
+
+  .row {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    padding: 12px 0;
+
+    min-height: 70px;
+  }
+
+  .row strong {
+    font-size: 12px;
+  }
+
+  .row b {
+    text-align: right;
+  }
+
+  .row i {
+    text-align: right;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .chart-head h2 {
+    font-size: 22px;
+  }
+
+  .filters button {
+    min-width: 35px;
+
+    height: 30px;
+
+    padding: 0 8px;
+
+    font-size: 10px;
+  }
+
+  .graph {
+    height: 190px;
+  }
+
+  .table-title {
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .table-title a {
+    font-size: 10px;
+  }
+
+}

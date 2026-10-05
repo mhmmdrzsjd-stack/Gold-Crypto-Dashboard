@@ -1,0 +1,120 @@
+.settings {
+
+  margin-top: 35px;
+
+}
+
+
+.settings > span {
+
+  color: #d9b85a;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+}
+
+
+.settings h2 {
+
+  margin-top: 7px;
+
+  font-size: 28px;
+
+}
+
+
+.setting {
+
+  margin-top: 15px;
+
+  padding: 22px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  background: #12151c;
+
+  border: 1px solid #252a34;
+
+  border-radius: 15px;
+
+}
+
+
+.setting p {
+
+  margin-top: 5px;
+
+  color: #697283;
+
+  font-size: 11px;
+
+}
+
+
+.toggle,
+select {
+
+  border: 0;
+
+  border-radius: 8px;
+
+  padding: 8px 14px;
+
+  cursor: pointer;
+
+}
+
+
+.toggle {
+
+  background: #252a34;
+
+  color: #777f90;
+
+}
+
+
+.toggle.active {
+
+  background: #16362c;
+
+  color: #38d996;
+
+}
+
+
+select {
+
+  background: #222630;
+
+  color: #d9b85a;
+
+  outline: none;
+
+}
+
+
+.saved {
+
+  margin-top: 20px;
+
+  padding: 15px;
+
+  color: #737b8c;
+
+  font-size: 12px;
+
+}
+
+
+.saved strong {
+
+  color: #d9b85a;
+
+}

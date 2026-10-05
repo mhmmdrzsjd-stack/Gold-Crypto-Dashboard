@@ -1,0 +1,138 @@
+.header {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.date {
+  color: #d9b85a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+h1 {
+  margin: 7px 0 5px;
+  font-size: 32px;
+}
+p {
+  color: #70798a;
+  font-size: 13px;
+}
+.actions {
+  display: flex;  align-items: center;
+ gap: 10px;
+}
+.search {
+  width: 190px;
+  height: 44px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #13161e;
+  border: 1px solid #282d37;
+  border-radius: 11px;
+  color: #737c8d;
+}
+.search input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 12px;
+}
+.search input::placeholder {
+  color: #606878;
+}
+.search kbd {
+  background: #20242d;
+  padding: 3px 7px;
+  border-radius: 5px;
+}
+.notification {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  background: #13161e;
+  border: 1px solid #282d37;
+  cursor: pointer;
+}
+.notification-dot {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d9b85a;
+}
+.profile {
+  height: 44px;
+  padding: 3px 12px 3px 4px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: #13161e;
+  border: 1px solid #282d37;
+  border-radius: 11px;
+}
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #d9b85a;
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+.profile strong,
+.profile small {
+  display: block;
+}
+.profile strong {
+  color: white;
+  font-size: 11px;
+}
+.profile small {
+  margin-top: 3px;
+  color: #697283;
+  font-size: 9px;
+}
+.notification-popup {
+  position: absolute;
+  top: 58px;
+  right: 130px;
+  width: 240px;
+  padding: 18px;
+  background: #171a22;
+  border: 1px solid #303540;
+  border-radius: 14px;
+  z-index: 50;
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.35);
+}
+.notification-popup p {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #292e38;
+  font-size: 11px;
+}
+@media (max-width: 700px) {
+  .search {
+    width: 45px;
+  }
+  .search input,
+  .search kbd {
+    display: none;
+  }
+  .profile {
+    padding-right: 4px;
+  }
+  .profile div:last-child {
+    display: none;
+  }
+}

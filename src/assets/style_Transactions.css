@@ -1,0 +1,93 @@
+.title {
+  margin-top: 35px;
+}
+
+.title span {
+  color: #d9b85a;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.title h2 {
+  margin-top: 7px;
+  font-size: 28px;
+}
+
+.transactions {
+  margin-top: 25px;
+  background: #12151c;
+  border: 1px solid #252a34;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.transaction {
+  min-height: 85px;
+  padding: 15px 25px;
+  display: grid;
+  grid-template-columns: 50px 1fr auto;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #222630;
+}
+
+.transaction:last-child {
+  border-bottom: 0;
+}
+
+.transaction-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #202536;
+  color: #8fa7ff;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.transaction-icon.gold {
+  background: #332a16;
+  color: #d9b85a;
+}
+
+.transaction strong,
+.transaction small {
+  display: block;
+}
+
+.transaction small {
+  margin-top: 5px;
+  color: #697283;
+  font-size: 10px;
+}
+
+.transaction b {
+  color: #38d996;
+}
+
+@media (max-width: 600px) {
+  .transaction {
+    grid-template-columns: 45px 1fr;
+  }
+
+  .transaction b {
+    display: none;
+  }
+}
+
+/* فقط برای وضعیت Loading و Error */
+.state-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: #888888;
+  font-size: 14px;
+}
+
+.state-message.error {
+  color: #e05260;
+}

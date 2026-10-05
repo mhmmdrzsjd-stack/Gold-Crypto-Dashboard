@@ -1,0 +1,338 @@
+.gold {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+  background: #f6f7fb;
+}
+
+/* =========================
+   Title
+========================= */
+
+.gold-label {
+  display: block;
+  color: #171717;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* =========================
+   Live Box
+========================= */
+
+.gold-live {
+  margin-top: 18px;
+  padding: 10px 15px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.gold-live:hover {
+  border-color: #dddddd;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.gold-live-dot {
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #20c878;
+  box-shadow: 0 0 8px rgba(32, 200, 120, 0.5);
+  animation: gold-live-pulse 1.5s infinite;
+}
+
+.gold-live-dot.loading {
+  background: #d9b85a;
+  box-shadow: 0 0 8px rgba(217, 184, 90, 0.5);
+}
+
+.gold-live-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.gold-live-info strong {
+  color: #20a866;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.gold-live-info span {
+  color: #999999;
+  font-size: 11px;
+}
+
+/* =========================
+   Main Price
+========================= */
+
+.gold-main {
+  margin-top: 18px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+
+.gold-main:hover {
+  transform: translateY(-2px);
+  border-color: #dddddd;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.gold-main > div:first-child > span {
+  color: #999999;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.gold-main h1 {
+  margin: 8px 0;
+  color: #171717;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.gold-main b {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.gold-unit {
+  text-align: right;
+}
+
+.gold-unit small {
+  display: block;
+  color: #999999;
+  font-size: 11px;
+}
+
+.gold-unit strong {
+  display: block;
+  margin-top: 5px;
+  color: #171717;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================
+   Gold Cards
+========================= */
+
+.gold-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.gold-card {
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+
+.gold-card:hover {
+  transform: translateY(-2px);
+  border-color: #dddddd;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.gold-card span {
+  color: #999999;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.gold-card strong {
+  display: block;
+  margin-top: 8px;
+  color: #171717;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* =========================
+   Information
+========================= */
+
+.gold-info {
+  margin-top: 12px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 16px;
+}
+
+.gold-info div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.gold-info span {
+  color: #999999;
+  font-size: 11px;
+}
+
+.gold-info strong {
+  color: #171717;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.live-text {
+  color: #20a866 !important;
+}
+
+/* =========================
+   States
+========================= */
+
+.state-message {
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888888;
+  font-size: 14px;
+}
+
+.state-message.error {
+  color: #e05260;
+}
+
+.positive {
+  color: #20a866 !important;
+}
+
+.negative {
+  color: #e05260 !important;
+}
+
+/* =========================
+   Animation
+========================= */
+
+@keyframes gold-live-pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(0.85);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1000px) {
+  .gold-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gold-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 700px) {
+  .gold {
+    padding: 20px;
+  }
+
+  .gold-label {
+    font-size: 28px;
+  }
+
+  .gold-main {
+    padding: 20px;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .gold-main h1 {
+    font-size: 27px;
+  }
+
+  .gold-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gold-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 450px) {
+  .gold {
+    padding: 16px;
+  }
+
+  .gold-label {
+    font-size: 25px;
+  }
+
+  .gold-main {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .gold-main h1 {
+    font-size: 24px;
+  }
+
+  .gold-unit {
+    text-align: left;
+  }
+
+  .gold-card {
+    padding: 18px;
+  }
+
+  .gold-info {
+    padding: 18px;
+  }
+
+  .gold-live {
+    width: auto;
+  }
+}

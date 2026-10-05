@@ -1,0 +1,83 @@
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+}
+
+
+html,
+body,
+#app {
+
+  width: 100%;
+
+  min-height: 100%;
+
+}
+
+
+body {
+
+  background: #090b10;
+
+  color: white;
+
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+}
+
+
+button,
+input,
+select {
+
+  font-family: inherit;
+
+}
+
+
+button {
+
+  outline: none;
+
+}
+
+
+::-webkit-scrollbar {
+
+  width: 7px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+  background: #0b0d12;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+  background: #292e38;
+
+  border-radius: 10px;
+
+}
+
+
+::selection {
+
+  background: #d9b85a;
+
+  color: #111;
+
+}
