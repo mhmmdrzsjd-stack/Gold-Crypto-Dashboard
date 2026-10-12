@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SecureID | احراز هویت</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="auth-card">
+
+        <div class="brand">
+            <div class="brand-icon">S</div>
+            <span>SecureID</span>
+        </div>
+
+        <div class="progress-area">
+
+            <div class="step completed">
+                <span>✓</span>
+                <p>ثبت نام</p>
+            </div>
+
+            <div class="line active-line"></div>
+
+            <div class="step active">
+                <span>2</span>
+                <p>احراز هویت</p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="step">
+                <span>3</span>
+                <p>تکمیل</p>
+            </div>
+
+        </div>
+
+        <h1>احراز هویت</h1>
+
+        <p class="description">
+            برای تکمیل ثبت نام، اطلاعات هویتی خود را وارد کنید.
+        </p>
+
+        <form>
+
+            <div class="mb-3">
+
+                <label>کد ملی</label>
+
+                <input
+                    type="text"
+                    class="form-control"
+                    maxlength="10"
+                    placeholder="کد ملی ۱۰ رقمی"
+                    required
+                >
+
+            </div>
+
+            <div class="mb-3">
+
+                <label>تاریخ تولد</label>
+
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="مثلاً 1388/05/20"
+                    required
+                >
+
+            </div>
+
+            <div class="mb-4">
+
+                <label>تصویر کارت ملی</label>
+
+                <div class="upload-box">
+
+                    <div class="upload-icon">
+                        ↑
+                    </div>
+
+                    <h6>
+                        تصویر کارت ملی را انتخاب کنید
+                    </h6>
+
+                    <p>
+                        فرمت JPG یا PNG
+                    </p>
+
+                    <input
+                        type="file"
+                        class="form-control mt-3"
+                        accept="image/png,image/jpeg"
+                    >
+
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                class="main-btn"
+                onclick="location.href='success.html'"
+            >
+                تأیید و تکمیل
+                <span>←</span>
+            </button>
+
+            <button
+                type="button"
+                class="back-btn"
+                onclick="location.href='index.html'"
+            >
+                بازگشت
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

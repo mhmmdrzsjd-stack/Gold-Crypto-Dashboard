@@ -14,6 +14,7 @@ import './assets/style_Markets.css'
 import './assets/style_Portfolio.css'
 import './assets/style_Settings.css'
 import './assets/style_Transactions.css'
+import './assets/style_Signup.css'
 
 const app = createApp(App)
 app.use(createPinia())
